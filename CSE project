@@ -1,0 +1,70 @@
+#include<stdio.h>
+#include<string.h>
+float grade_point(float);
+struct student
+{
+    char name[20];
+    char id [10];
+    float cse,cse_lab,eee,eee_lab,math,physics,urel,urem,sgpa;
+};
+int main()
+{
+    struct student n;
+    float sgpa;
+{
+
+    printf("student name::");
+    scanf("%S",n.name);
+    gets(n.name);
+        printf("student id::");
+        scanf("%S",n.id);
+        gets(n.id);
+
+        printf("Enter the number for CSE:");
+        scanf("%f",&n.cse);
+        printf("Enter the number for CSE LAB:");
+        scanf("%f",&n.cse_lab);
+        printf("Enter the number for EEE:");
+        scanf("%f",&n.eee);
+        printf("Enter the number for EEE LAB:");
+        scanf("%f",&n.eee_lab);
+        printf("Enter the number for PHYSICS:");
+        scanf("%f",&n.physics);
+        printf("Enter the number for MATH:");
+        scanf("%f",&n.math);
+        printf("Enter the number for UREL:");
+        scanf("%f",&n.urel);
+        printf("Enter the number for UREM:");
+        scanf("%f",&n.urem);
+        n.sgpa = (((grade_point(n.cse)) * 3) + ((grade_point(n.cse_lab)) * 1.5) + ((grade_point(n.eee)) * 3) + ((grade_point(n.eee_lab)) * 1.5) + ((grade_point(n.math)) * 3) + ((grade_point(n.physics)) * 3) + ((grade_point(n.urel)) * 2) + ((grade_point(n.urem)) * 1)) / 18;
+        printf("sgpa:%.2f",n.sgpa);
+    }
+}
+float grade_point(float x)
+{
+
+    if (x >= 80 && x <= 100)
+        return 4.00;
+    else if (x >= 75)
+        return 3.75;
+    else if (x >= 70)
+        return 3.50;
+    else if (x >= 65)
+        return 3.25;
+    else if (x >= 60)
+        return 3.00;
+    else if (x >= 55)
+        return 2.75;
+    else if (x >= 50)
+        return 2.50;
+    else if (x >= 45)
+        return 2.25;
+    else if (x >= 40)
+        return 2.00;
+    else
+        return 0;
+
+
+
+ }
+
