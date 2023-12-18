@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    long long int X,Y,C;
+    scanf("%lli %lli",&X,&Y);
+     C = X + Y;
+    printf("%lli + %lli = %lli\n",X,Y,C);
+     C = X * Y ;
+    printf("%lli * %lli = %lli\n",X,Y,C);
+     C = X - Y;
+    printf("%lli - %lli = %lli\n",X,Y,C);
+    return 0;
+}
+/*inputCopy
+5 10
+outputCopy
+5 + 10 = 15
+5 * 10 = 50
+5 - 10 = -5*/
